@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const domcontainer = document.querySelector("#root");
+
+const elmnt = React.createElement("div", null, "Hello React");
+
+createRoot(domcontainer).render(elmnt);
+
+
+// ...................................................... with raw Js..................................
+
+/* 
+const p = document.createElement("p");
+p.innerHTML = "Hello Javascript";
+domcontainer.appendChild(p);
+*/
